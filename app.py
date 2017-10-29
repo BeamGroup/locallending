@@ -7,9 +7,15 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/login')
+def login():
+    view = 'login'
+    return render_template('signup.html', view=view)
+
 @app.route('/signup')
 def signup():
-    return render_template('signup.html')
+    view = 'signup'
+    return render_template('signup.html', view=view)
 
 @app.route('/search')
 def search():

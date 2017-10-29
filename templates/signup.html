@@ -20,24 +20,32 @@
               <div class="spotlight">
                 <div class="content">
                   <header class="major">
-                    <h1>Local Lending</h1>
-                    <h2>Signup</h2>
+										<h1>Local Lending</h1>
+										{% if view == 'signup' %}
+										<h2>Signup</h2>
                   </header>
                   <form class="form" action='/search'>
                     <div class="row uniform">
-												<div class="6u 12u$(xsmall)">
-													<input placeholder="First Name" type="text">
-												</div>
-												<div class="6u$ 12u$(xsmall)">
-													<input placeholder="Last Name" type="text">
-												</div>
+											<div class="6u 12u$(xsmall)">
+												<input placeholder="First Name" type="text">
 											</div>
-                    <br />
+											<div class="6u$ 12u$(xsmall)">
+												<input placeholder="Last Name" type="text">
+											</div>
+										</div>
+										<br />
+										{% else %}
+										<h2>Login</h2>
+                  </header>
+                  <form class="form" action='/search'>
+										{% endif %}
                     <input type="text" placeholder='Username' required>
                     <br />
-                    <input type="password" placeholder="Password" required>
+										<input type="password" placeholder="Password" required>
+										{% if view == 'signup' %}
                     <br />
-                    <input type="password" placeholder="Confirm Password" required>
+										<input type="password" placeholder="Confirm Password" required>
+										{% endif %}
                     <hr />
                     <button id='submit-button' type='submit'>Submit</button>
                   </form>
