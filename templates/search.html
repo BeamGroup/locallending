@@ -13,7 +13,7 @@
 	<body>
 
 			<div id="wrapper">
-					<header id="header" class="alt">
+					<header id="header" class="alt" style="padding-bottom: 10px;">
 						{% if user == None %}
 						<h1>Hello User!</h1>
 						<p>Meet up with friends to borrow or lend things!</p>
@@ -21,6 +21,8 @@
 						<h1>Hello {{ user }}!</h1>
 						<p>Meet up with friends to borrow or lend things!</p>
 						{% endif %}
+
+						<a disabled="disabled" style="display:none;margin-left: auto;margin-right: auto;" id="show" class="button special fit">Thanks for sharing!</a>
 					</header>
 
 				<!-- Main -->
@@ -41,6 +43,7 @@
 									<input type="radio" name="cat" id="cat-boats" value="Boats"><label for="cat-boats">Boats</label>
 									<input type="radio" name="cat" id="cat-books" value="Books"><label for="cat-books">Books</label>
 									<input type="radio" name="cat" id="cat-camping" value="Camping"><label for="cat-camping">Camping</label>
+									<input type="radio" name="cat" id="cat-clothes" value="Clothes"><label for="cat-clothes">Clothes</label>
 									<input type="radio" name="cat" id="cat-cellphones" value="Cell Phones"><label for="cat-cellphones">Cellphones</label>
 									<input type="radio" name="cat" id="cat-computers" value="Computers"><label for="cat-computers">Computers</label>
 									<input type="radio" name="cat" id="cat-gardening" value="Gardening"><label for="cat-gardening">Gardening</label>
@@ -49,6 +52,7 @@
 									<input type="radio" name="cat" id="cat-instruments" value="Musical Instruments"><label for="cat-instruments">Musical Instruments</label>
 									<input type="radio" name="cat" id="cat-sports" value="Sports"><label for="cat-sports">Sports</label>
 									<input type="radio" name="cat" id="cat-toysgames" value="Toys/Games"><label for="cat-toysgames">Toys/Games</label>
+									<input type="radio" name="cat" id="cat-other" value="Other"><label for="cat-other">Other</label>
 								</div>
 							</form>
 						</div>
@@ -64,5 +68,14 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
 			<script src="{{ url_for('static',filename='js/search.js') }}" /></script>
+			<script type="text/javascript">
+				function checkSuccess(){
+					var x = document.referrer; 
+					if(x == "http://ww1.bensommer.net:5000/new_item"){
+						document.getElementById('show').style.display = "block";
+					};
+				};
+				window.onload = checkSuccess();
+			</script>
 	</body>
 </html>
