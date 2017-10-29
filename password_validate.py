@@ -10,7 +10,7 @@ def password_validate(username, password):
 	query = ("SELECT username, password FROM users WHERE username = %s")
 	cursor.execute(query,(username,))
 	cnx.commit()
-	for (username_in_DB, password_in_DB) in cursor:
+	for (username_in_DB, password_in_DB) in cursor.fetchone():
 		if username == username_in_DB:
 			if password == password_in_DB:
 				return True
