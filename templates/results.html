@@ -34,7 +34,7 @@
 									<tbody>
 
 									{% for result in results %}
-										<tr onclick="document.location= '/trade/user={{result.holder_username}}'">
+										<tr onclick="document.location= '/trade?user={{result.holder_username}}'">
 											<td>{{ result.item_name }}</td>
 											<td>{{ result.description }}</td>
 											<td>{{ result.owner_username }}</td>
