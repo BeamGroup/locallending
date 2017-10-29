@@ -15,5 +15,5 @@ def password_validate(username, password):
 		cnx.close()
 		if username == username_in_DB:
 			if password == password_in_DB:
-				return True
-		return False
+				#return True
+		#return False
