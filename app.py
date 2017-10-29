@@ -15,7 +15,8 @@ def index():
 
 @app.route('/dashboard')
 def dashboard():
-    return render_template('dashboard.html')
+    user = request.args.get('user', default='achen8', type=str)
+    return render_template('dashboard.html', user=user)
 
 @app.route('/login')
 def login():
@@ -28,7 +29,7 @@ def login_post():
     password = request.form['password']
     logged_in = password_validate(user, password)
     if (logged_in):
-        return redirect(url_for("dashboard"))
+        return redirect(url_for("dashboard", user=user))
     else:
         return render_template('signup.html', view='login', login='failed')
 
