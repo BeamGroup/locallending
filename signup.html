@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/signup.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -22,14 +23,14 @@
                   <header class="major">
                     <h2>Signup</h2>
                   </header>
-                  <form action="">
+                  <form class="form" action='/search.html' method='post'>
                     <span>Username: <input type="text"></span>
                     <br />
-                    <span>Password: <input type="text"></span>
+                    <span>Password: <input type="password"></>
                     <br />
-                    <span>Confirm Password: <input type="text"></span>
+                    <span>Confirm Password: <input type="password"></span>
                     <br />
-                    <button type='submit'>Submit</button>
+                    <button id='submit-button' type='submit'>Submit</button>
                   </form>
                 </div>
               </div>
@@ -44,9 +45,7 @@
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
 	</body>
 </html>
