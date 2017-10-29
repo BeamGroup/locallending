@@ -55,16 +55,17 @@
 									<option value="Other">Other</option>
 								</select>
 							</div>
-							<input type="text" name="form-username" id="form-username" style="display:none;">
+							<input type="text" name="form-username" id="form-username" style="">
 
 							<div id="add-item-wrapper">
 								<button id="add-item">Add Item</button>
 							</div>
 						</form>
-					</div><br />
-					<div style="margin-right: auto; margin-left: auto;text-align:center;">
-					<a class="button special" href="/">Home</a> | <a class="button special" href="search">Search</a> | <a class="button special" href="new_item">Add Listing</a>
-				</div>
+						<br />
+						<div style="margin-right: auto; margin-left: auto;text-align:center;">
+							<a class="button special" href="/">Home</a> | <a class="button special" href="search">Search</a> | <a class="button special" href="new_item">Add Listing</a>
+						</div>
+					</div>
 			</div>
 
 		<!-- Scripts -->
@@ -83,9 +84,7 @@
 				}
 
 				$(document).ready(function(){
-					$('#form-username').val(function() {
-						getCookie('username');
-					});
+					$('#form-username').val(getCookie('username'));
 					alert(getCookie('username'));
 				});
 			</script>
