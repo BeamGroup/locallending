@@ -75,8 +75,9 @@ def submit_item_post():
     item = request.form['item-title']
     description = request.form['item-description']
     category = request.form['item-category']
-    owner_id = '1'
-    new_item(item, description, category, owner_id)
+    owner = request.form['form-username']
+    holder = request.form['form-username']
+    new_item(item, description, category, owner, holder)
     return redirect( url_for("search") )
 
 @app.route('/trade')
