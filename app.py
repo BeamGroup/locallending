@@ -40,14 +40,6 @@ def signup_post():
     new_user(user, password, email)
     return render_template('redirectToSearch.html')
 
-@app.route('/submit_item', methods=['POST'])
-def submit_item_post():
-    user = request.form['item-name']
-    password = request.form['description']
-    email = request.form['owner-id']
-    new_item(user, password, email)
-    return render_template('redirectToSearch.html')
-
 @app.route('/search')
 def search():
     return render_template('search.html')
@@ -57,6 +49,7 @@ def search_post():
     query = request.form['query']
     category = request.form['cat']
     results = item_search(query, category)
+    print(results)
     return redirect(url_for(results, results=results))
 
 @app.route('/results')
@@ -68,5 +61,13 @@ def elements():
     return render_template('elements.html')
 
 @app.route('/new_item')
-def new_item():
+def new_item_get():
     return render_template('new_item.html')
+
+@app.route('/new_item', methods=['POST'])
+def submit_item_post():
+    user = request.form['item-name']
+    password = request.form['description']
+    email = request.form['owner-id']
+    new_item(user, password, email)
+    return render_template('redirectToSearch.html')
