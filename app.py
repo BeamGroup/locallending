@@ -5,12 +5,17 @@ from new_user import new_user
 from rating import rate
 from search_item import item_search
 from password_validate import password_validate
+import MySQLdb
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
 @app.route('/login')
 def login():
