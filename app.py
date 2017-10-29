@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect
 from list_user_transactions import list_user_transactions
 from new_item import new_item
 from new_user import new_user
@@ -25,7 +25,7 @@ def login_post():
     if (logged_in):
         return redirect(url_for(search, user=user))
     else:
-        return redirect(url_for(search, user='user'))
+        return render_template('signup.html', view='login', login='failed')
 
 @app.route('/signup')
 def signup():
@@ -38,7 +38,7 @@ def signup_post():
     password = request.form['password']
     email = request.form['email']
     new_user(user, password, email)
-    return render_template('redirectToSearch.html')
+    return redirect( url_for(search, user=user) )
 
 @app.route('/search')
 def search():
@@ -48,8 +48,14 @@ def search():
 def search_post():
     query = request.form['query']
     category = request.form['cat']
+<<<<<<< HEAD
     result = item_search(query, category)
     return redirect(url_for('results_view', results = result))
+=======
+    results = item_search(query, category)
+    print(results)
+    return redirect( url_for(results, results=results) )
+>>>>>>> 5e234b08f69aa119ee66af6adbce6c92289c8cd1
 
 @app.route('/results')
 def results_view(results = []):
@@ -66,8 +72,8 @@ def new_item_get():
 
 @app.route('/new_item', methods=['POST'])
 def submit_item_post():
-    user = request.form['item-name']
-    password = request.form['description']
-    email = request.form['owner-id']
-    new_item(user, password, email)
-    return render_template('redirectToSearch.html')
+    item = request.form['item-name']
+    description = request.form['description']
+    owner_id = 'achen8'
+    new_item(item, description, owner_id)
+    return redirect( url_for(search) )
