@@ -14,7 +14,7 @@ def rate(userID, rating_from_user):
 	average_rating = 0
 
 	for (user_id, average_rating, total_rating_count) in cursor:
-		if(total_rating_count > 0)
+		if(total_rating_count > 0):
 			average_rating = float(average_rating)
 			total_rating_count = int(total_rating_count)
 			total_rating = average_rating * total_rating_count

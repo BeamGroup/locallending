@@ -16,7 +16,7 @@ def login():
     view = 'login'
     return render_template('signup.html', view=view)
 
-@app.route('/search', methods=['POST'])
+@app.route('/signup', methods=['POST'])
 def signup_post():
     user = request.form['username']
     password = request.form['password']
