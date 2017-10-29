@@ -1,0 +1,20 @@
+#main {
+    padding: 20px;
+}
+
+#new-item-form> h2 {
+    margin: 20px 0 0 0;
+}
+
+#category-wrapper {
+    margin-top: 20px;
+    display: flex;
+}
+
+#category-wrapper > h2 {
+    margin-right: 10%;
+}
+
+#item-category {
+    max-width: 50%;
+}
