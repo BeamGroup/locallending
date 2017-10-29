@@ -8,7 +8,7 @@ def password_validate(username, password):
 	cursor = cnx.cursor()
 
 	query = ("SELECT username, password FROM users WHERE username = %s")
-	cursor.execute(query,(username))
+	cursor.execute(query,username)
 	cnx.commit()
 	for (username_in_DB, password_in_DB) in cursor:
 		cursor.close()
