@@ -28,7 +28,7 @@ def login_post():
     password = request.form['password']
     logged_in = password_validate(user, password)
     if (logged_in):
-        return redirect(url_for("search", user=user))
+        return redirect(url_for("dashboard"))
     else:
         return render_template('signup.html', view='login', login='failed')
 
@@ -43,7 +43,7 @@ def signup_post():
     password = request.form['password']
     email = request.form['email']
     new_user(user, password, email)
-    return redirect( url_for("search", user=user) )
+    return redirect( url_for("dashboard", user=user) )
 
 @app.route('/search')
 def search():
