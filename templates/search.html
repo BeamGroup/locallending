@@ -33,12 +33,21 @@
 								<input type="text" placeholder="Search for anything" id="searchbar" autofocus >
 								<button id="cat-toggle">Categories</button>
 							</div>
-							<div id="adv-search-options">
-								<div id="search-cats">
-									<input type="checkbox" id="cat-balls"><label for="cat-balls">Balls</label>
-									<input type="checkbox" id="cat-bicycles"><label for="cat-bicycles">Bicycles</label>
-									<input type="checkbox" id="cat-tools"><label for="cat-tools">Tools</label>
-								</div>
+							<div id="search-cats" style="display:none">
+								<input type="checkbox" id="cat-appliances"><label for="cat-appliances">Appliances</label>
+								<input type="checkbox" id="cat-bikes"><label for="cat-bikes">Bikes</label>
+								<input type="checkbox" id="cat-boats"><label for="cat-boats">Boats</label>
+								<input type="checkbox" id="cat-books"><label for="cat-books">Books</label>
+								<input type="checkbox" id="cat-camping"><label for="cat-camping">Camping</label>
+								<input type="checkbox" id="cat-cellphones"><label for="cat-cellphones">Cellphones</label>
+								<input type="checkbox" id="cat-computers"><label for="cat-computers">Computers</label>
+								<input type="checkbox" id="cat-gardening"><label for="cat-gardening">Gardening</label>
+								<input type="checkbox" id="cat-furniture"><label for="cat-furniture">Furniture</label>
+								<input type="checkbox" id="cat-photovideo"><label for="cat-photovideo">Photo/Video</label>
+								<input type="checkbox" id="cat-instruments"><label for="cat-instruments">Musical Instruments</label>
+								<input type="checkbox" id="cat-sports"><label for="cat-sports">Sports</label>
+								<input type="checkbox" id="cat-toysgames"><label for="cat-toysgames">Toys/Games</label>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -83,6 +92,6 @@
 			<script src="{{ url_for('static',filename='js/util.js') }}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
-
+			<script src="{{ url_for('static',filename='js/search.js') }}" /></script>
 	</body>
 </html>
