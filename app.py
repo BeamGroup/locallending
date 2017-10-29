@@ -1,9 +1,9 @@
 from flask import Flask, render_template, jsonify, request
-# from list_user_transactions import list_user_transactions
-# from new_item import new_item
-# from new_user import new_user
-# from rating import rate
-# from search_item import item_search
+from list_user_transactions import list_user_transactions
+from new_item import new_item
+from new_user import new_user
+from rating import rate
+from search_item import item_search
 
 app = Flask(__name__)
 
@@ -16,14 +16,13 @@ def login():
     view = 'login'
     return render_template('signup.html', view=view)
 
-@app.route('/signup', methods=['POST'])
+@app.route('/search', methods=['POST'])
 def signup_post():
     user = request.form['username']
     password = request.form['password']
     email = request.form['email']
-    # new_user(user, password, email)
-    # return
-    return str(user) + ', ' + str(password) + ', ' + str(email)
+    new_user(user, password, email)
+    return
 
 @app.route('/signup')
 def signup():
