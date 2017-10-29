@@ -1,16 +1,16 @@
 import mysql.connector
 
-def new_item(item_name,description,category,owner, holder, owner_id='1'):
+def new_item(item_name,description,category,owner, holder, owner_id='1', holder_id='1'):
 	cnx = mysql.connector.connect(user='root', password='bensommer',
                               host='127.0.0.1',
                               database='locallending')
 	cursor = cnx.cursor()
 
 	add_item = ("INSERT INTO items "
-               "(item_name,description, category,owner_username,holder_username, owner_id)"
-               "VALUES (%s, %s, %s, %s, %s, %s)")
+               "(item_name,description, category,owner_username,holder_username, owner_id, holder_id)"
+               "VALUES (%s, %s, %s, %s, %s, %s, %s)")
 
-	item_data = (item_name,description,category, owner, holder, owner_id)
+	item_data = (item_name,description,category, owner, holder, owner_id, holder_id)
 
 	cursor.execute(add_item, item_data)
 
