@@ -48,12 +48,12 @@ def search():
 def search_post():
     query = request.form['query']
     category = request.form['cat']
-    results = item_search(query, category)
-    print(results)
-    return redirect(url_for(results, results=results))
+    result = item_search(query, category)
+    return redirect(url_for('results_view', results = result))
 
 @app.route('/results')
-def results():
+def results_view(results = []):
+    print(results)
     return render_template('results.html')
 
 @app.route('/elements')
