@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
-		<link rel="stylesheet" href="{{ url_for('static',filename='css/search.css') }}"
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/search.css') }}" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -58,6 +58,10 @@
 						</div>
 					</div>
 			</div>
+			<br />
+			<div style="margin-right: auto; margin-left: auto;text-align:center;">
+					<a class="button special" href="/">Home</a> | <a class="button special" href="search">Search</a> | <a class="button special" href="new_item">Add Listing</a>
+				</div>
 
 		<!-- Scripts -->
 			<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
