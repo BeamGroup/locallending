@@ -33,10 +33,10 @@
 									<tbody>
 									{% for result in results %}
 										<tr>
-											<td>result.item_name</td>
-											<td>result.description</td>
-											<td>result.owner_username</td>
-											<td>result.holder_username</td>
+											<td>{{ result['item_name'] }}</td>
+											<td>{{ result.description }}</td>
+											<td>{{ result.owner_username }}</td>
+											<td>{{ result.holder_username }}</td>
 										</tr>
 									{% endfor %}
 									</tbody>

@@ -7,7 +7,7 @@ def item_search(keyword,category):
                               database='locallending')
 	cursor = cnx.cursor()
 
-	query = ("SELECT item_name, description, owner_id, holder_id FROM `items` WHERE item_name LIKE '%{}%'".format(keyword))
+	query = ("SELECT item_name, description, owner_id, holder_id FROM `items` WHERE item_name LIKE '%{}%' or description LIKE '%{}%'".format(keyword,keyword))
 	print(query)
 	
 	cursor.execute(query)

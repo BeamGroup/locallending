@@ -46,21 +46,16 @@ def search():
 
 @app.route('/search', methods=['POST'])
 def search_post():
-    query = request.form['query']
-    category = request.form['cat']
-<<<<<<< HEAD
-    result = item_search(query, category)
+    #query = request.form['query']
+    #category = request.form['cat']
+    #result = item_search(query, category)
+    result = [{'item_name': 'Drill', 'description': 'a red drill', 'owner_id': '1', 'holder_id':'1'}]
     return redirect(url_for('results_view', results = result))
-=======
-    results = item_search(query, category)
-    print(results)
-    return redirect( url_for(results, results=results) )
->>>>>>> 5e234b08f69aa119ee66af6adbce6c92289c8cd1
 
 @app.route('/results')
 def results_view(results = []):
     print(results)
-    return render_template('results.html')
+    return render_template('results.html', results = results)
 
 @app.route('/elements')
 def elements():
