@@ -38,6 +38,9 @@
                     <br />
 										{% else %}
 										<h2>Login</h2>
+										{% if failed != None %}
+										<p>Login Failed!</p>
+										{% endif %}
                   </header>
                   <form class="form" action='/login' method='POST'>
 										{% endif %}
