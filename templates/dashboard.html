@@ -46,7 +46,7 @@
 			<script src="{{ url_for('static',filename='js/util.js') }}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
-			<script type="text/javascript">$(document).ready(function(){document.cookie = "username=" + {{user}};});</script>
+			<script type="text/javascript">$(document).ready(function(){document.cookie = "username={{user}}";});</script>
 
 	</body>
 </html>
