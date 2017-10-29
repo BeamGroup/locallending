@@ -14,11 +14,11 @@
 
 			<div id="wrapper">
 					<header id="header" class="alt">
-						{% if name == 'user' %}
+						{% if user == None %}
 						<h1>Hello User!</h1>
 						<p>Meet up with friends to borrow or lend things!</p>
 						{% else %}
-						<h1>Hello {{ user.username }}!</h1>
+						<h1>Hello {{ user }}!</h1>
 						<p>Meet up with friends to borrow or lend things!</p>
 						{% endif %}
 					</header>
