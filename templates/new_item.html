@@ -55,20 +55,17 @@
 									<option value="Other">Other</option>
 								</select>
 							</div>
-
+							<input type="text" name="form-username" id="form-username" style="display:none;">
 							<div id="add-item-wrapper">
 								<button id="add-item">Add Item</button>
 							</div>
 						</form>
+						<br />
+						<div style="margin-right: auto; margin-left: auto;text-align:center;">
+							<a class="button special" href="/dashboard">Dashboard</a> | <a class="button special" href="search">Search</a> | <a class="button special" href="new_item">Add Listing</a>
+						</div>
 					</div>
-					<div style="margin-right: auto; margin-left: auto;text-align:center;">
-					<a class="button special" href="/">Home</a> | <a class="button special" href="search">Search</a> | <a class="button special" href="new_item">Add Listing</a>
-				</div>
-				<!-- Footer -->
-					<footer id="footer">
-						
-					</footer>
-
+					<br />
 			</div>
 
 		<!-- Scripts -->
@@ -79,6 +76,17 @@
 			<script src="{{ url_for('static',filename='js/util.js') }}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+			<script>
+				function getCookie(name) {
+  					var value = "; " + document.cookie;
+  					var parts = value.split("; " + name + "=");
+  					if (parts.length == 2) return parts.pop().split(";").shift();
+				}
+
+				$(document).ready(function(){
+					$('#form-username').val(getCookie('username'));
+				});
+			</script>
 
 	</body>
 </html>
