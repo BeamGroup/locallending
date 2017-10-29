@@ -1,9 +1,10 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, url_for, redirect
 from list_user_transactions import list_user_transactions
 from new_item import new_item
 from new_user import new_user
 from rating import rate
 from search_item import item_search
+from password_validate import password_validate
 
 app = Flask(__name__)
 
@@ -14,6 +15,21 @@ def index():
 @app.route('/login')
 def login():
     view = 'login'
+    return render_template('signup.html', view=view)
+
+@app.route('/login', methods=['POST'])
+def login_post():
+    user = request.form['username']
+    password = request.form['password']
+    logged_in = password_validate(user, password)
+    if (logged_in):
+        return redirect(url_for(search, user=user))
+    else:
+        return redirect(url_for(search))
+
+@app.route('/signup')
+def signup():
+    view = 'signup'
     return render_template('signup.html', view=view)
 
 @app.route('/signup', methods=['POST'])
@@ -32,13 +48,12 @@ def submit_item_post():
     new_item(user, password, email)
     return render_template('redirectToSearch.html')
 
-@app.route('/signup')
-def signup():
-    view = 'signup'
-    return render_template('signup.html', view=view)
-
 @app.route('/search')
 def search():
+    return render_template('search.html')
+
+@app.route('/search', methods=['POST'])
+def search_post():
     return render_template('search.html')
 
 @app.route('/results')
