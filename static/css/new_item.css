@@ -4,6 +4,7 @@
 
 #new-item-form> h2 {
     margin: 20px 0 0 0;
+    display: block;
 }
 
 #category-wrapper {
@@ -17,4 +18,15 @@
 
 #item-category {
     max-width: 50%;
+}
+
+button#add-item {
+    background-color: steelblue !important;
+    color: white !important;
+}
+
+#add-item-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }

@@ -22,13 +22,12 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>Add an Item</h1>
+						<p>Offer an item to your community.</p>
 					</header>
 
 				<!-- Main -->
 					<div id="main">
-						<h1>Add an Item</h1>
 						<form id="new-item-form" action="/new_item_request" method="POST">
 							<h2>Item Name</h2>
 							<input type="text" name="item-title" id="item-title" placeholder="Enter a name" autofocus required/>
@@ -37,9 +36,8 @@
 							<textarea name="item-description" id="item-description" placeholder="Enter a description..." required></textarea>
 
 							<div id="category-wrapper">
-								<h2>Category</h2>
+								<h2>Category (choose one)</h2>
 								<select name="item-category" id="item-category" required>
-									<option value="disabled" selected disabled>Choose one...</option>
 									<option value="cat-appliances">Appliances</option>
 									<option value="cat-bikes">Bikes</option>
 									<option value="cat-boats">Boats</option>
@@ -54,6 +52,10 @@
 									<option value="cat-sports">Sports</option>
 									<option value="cat-toysgames">Toys/Games</option>
 								</select>
+							</div>
+
+							<div id="add-item-wrapper">
+								<button id="add-item">Add Item</button>
 							</div>
 						</form>
 					</div>
