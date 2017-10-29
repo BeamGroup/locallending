@@ -10,7 +10,7 @@ def new_item(item_name,description,category,owner, holder, owner_id='1'):
                "(item_name,description, category,owner_username,holder_username, owner_id)"
                "VALUES (%s, %s, %s, %s, %s, %s)")
 
-	item_data = (item_name,description,category, owner, holder)
+	item_data = (item_name,description,category, owner, holder, owner_id)
 
 	cursor.execute(add_item, item_data)
 
