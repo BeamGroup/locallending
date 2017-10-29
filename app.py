@@ -69,11 +69,11 @@ def elements():
 def new_item_get():
     return render_template('new_item.html')
 
-@app.route('/new_item', methods=['POST'])
+@app.route('/new_item_request', methods=['POST'])
 def submit_item_post():
     item = request.form['item-title']
     description = request.form['item-description']
     category = request.form['item-category']
-    owner_id = 'achen8'
+    owner_id = '1'
     new_item(item, description, category, owner_id)
     return redirect( url_for("search") )
