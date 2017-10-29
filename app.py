@@ -22,7 +22,7 @@ def login_post():
     user = request.form['username']
     password = request.form['password']
     logged_in = password_validate(user, password)
-    if (logged_in == 'True') {
+    if (logged_in) {
         return redirect(url_for(search, user=user))
     }
     else {
