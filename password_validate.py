@@ -11,10 +11,7 @@ def password_validate(username, password):
 	cursor.execute(query,(username,))
 	cnx.commit()
 	for (username_in_DB, password_in_DB) in cursor:
-		cursor.close()
-		cnx.close()
 		if username == username_in_DB:
 			if password == password_in_DB:
-				pass
-				#return True
-		#return False
+				return True
+		return False
