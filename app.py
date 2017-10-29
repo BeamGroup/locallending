@@ -77,3 +77,7 @@ def submit_item_post():
     owner_id = '1'
     new_item(item, description, category, owner_id)
     return redirect( url_for("search") )
+
+@app.route('/trade')
+def trade():
+    return render_template('trade.html')
