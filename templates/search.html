@@ -14,14 +14,19 @@
 
 			<div id="wrapper">
 					<header id="header" class="alt">
+						{% if name != None %}
 						<h1>Local Lending</h1>
 						<p>Meet up with friends to borrow or lend things!</p>
+						{% else %}
+						<h1>Hello {% name %}!</h1>
+						<p>Meet up with friends to borrow or lend things!</p>
+						{% endif %}
 					</header>
 
 				<!-- Main -->
 					<div id="main">
 						<div id="searchwrapper">
-							<form id="search-form" action="searchrequest.html" method="GET">
+							<form id="search-form" action="/search" method="GET">
 								<div id="search-bar-wrapper">
 									<input type="text" name="query" placeholder="Search for anything" id="searchbar" autofocus required>
 									<button id="search-button">Search</button>
@@ -30,19 +35,19 @@
 									<span id="cat-toggle">Categories</span>
 								</div>
 								<div id="search-cats" style="display:none">
-									<input type="checkbox" name="cat-appliances" id="cat-appliances"><label for="cat-appliances">Appliances</label>
-									<input type="checkbox" name="cat-bikes" id="cat-bikes"><label for="cat-bikes">Bikes</label>
-									<input type="checkbox" name="cat-boats" id="cat-boats"><label for="cat-boats">Boats</label>
-									<input type="checkbox" name="cat-books" id="cat-books"><label for="cat-books">Books</label>
-									<input type="checkbox" name="cat-camping" id="cat-camping"><label for="cat-camping">Camping</label>
-									<input type="checkbox" name="cat-cellphones" id="cat-cellphones"><label for="cat-cellphones">Cellphones</label>
-									<input type="checkbox" name="cat-computers" id="cat-computers"><label for="cat-computers">Computers</label>
-									<input type="checkbox" name="cat-gardening" id="cat-gardening"><label for="cat-gardening">Gardening</label>
-									<input type="checkbox" name="cat-furniture" id="cat-furniture"><label for="cat-furniture">Furniture</label>
-									<input type="checkbox" name="cat-photovideo" id="cat-photovideo"><label for="cat-photovideo">Photo/Video</label>
-									<input type="checkbox" name="cat-instruments" id="cat-instruments"><label for="cat-instruments">Musical Instruments</label>
-									<input type="checkbox" name="cat-sports" id="cat-sports"><label for="cat-sports">Sports</label>
-									<input type="checkbox" name="cat-toysgames" id="cat-toysgames"><label for="cat-toysgames">Toys/Games</label>
+									<input type="radio" name="cat-appliances" id="cat-appliances"><label for="cat-appliances">Appliances</label>
+									<input type="radio" name="cat-bikes" id="cat-bikes"><label for="cat-bikes">Bikes</label>
+									<input type="radio" name="cat-boats" id="cat-boats"><label for="cat-boats">Boats</label>
+									<input type="radio" name="cat-books" id="cat-books"><label for="cat-books">Books</label>
+									<input type="radio" name="cat-camping" id="cat-camping"><label for="cat-camping">Camping</label>
+									<input type="radio" name="cat-cellphones" id="cat-cellphones"><label for="cat-cellphones">Cellphones</label>
+									<input type="radio" name="cat-computers" id="cat-computers"><label for="cat-computers">Computers</label>
+									<input type="radio" name="cat-gardening" id="cat-gardening"><label for="cat-gardening">Gardening</label>
+									<input type="radio" name="cat-furniture" id="cat-furniture"><label for="cat-furniture">Furniture</label>
+									<input type="radio" name="cat-photovideo" id="cat-photovideo"><label for="cat-photovideo">Photo/Video</label>
+									<input type="radio" name="cat-instruments" id="cat-instruments"><label for="cat-instruments">Musical Instruments</label>
+									<input type="radio" name="cat-sports" id="cat-sports"><label for="cat-sports">Sports</label>
+									<input type="radio" name="cat-toysgames" id="cat-toysgames"><label for="cat-toysgames">Toys/Games</label>
 								</div>
 							</form>
 						</div>
