@@ -7,8 +7,9 @@ def new_user(username, password, email):
 
 	cursor = cnx.cursor()
 
-	query = ("INSERT INTO users (username, password, email, average_rating, total_rating_count) VALUES (%s, %s, %s, 0, 0)")
-	cnx.commit()
+	query = ("INSERT INTO `users` (username, password, email, average_rating, total_rating_count) VALUES (%s, %s, %s, '0', '0')")
 	cursor.execute(query,(username,password,email))
-	cnx.close()
+	cnx.commit()
+	
 	cursor.close()
+	cnx.close()

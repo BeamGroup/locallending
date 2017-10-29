@@ -24,6 +24,14 @@ def signup_post():
     new_user(user, password, email)
     return render_template('redirectToSearch.html')
 
+@app.route('/submit_item', methods=['POST'])
+def submit_item_post():
+    user = request.form['item-name']
+    password = request.form['description']
+    email = request.form['owner-id']
+    new_item(user, password, email)
+    return render_template('redirectToSearch.html')
+
 @app.route('/signup')
 def signup():
     view = 'signup'
