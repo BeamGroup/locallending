@@ -7,7 +7,7 @@ def item_search(keyword,category):
 	cursor = cnx.cursor()
 
 	query = ("SELECT id, item_name FROM items "
-         "WHERE item_name LIKE \%%s\% OR description LIKE \%%s\% OR category LIKE \%%s\%")
+         "WHERE UPPER(item_name) LIKE UPPER(\%%s\%) OR UPPER(description) LIKE UPPER(\%%s\%) OR category LIKE \%%s\%")
 
 
 	cursor.execute(query, (keyword,keyword,category))
