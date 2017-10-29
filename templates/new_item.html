@@ -6,13 +6,14 @@
 -->
 <html>
 	<head>
-		<title>Generic - Stellar by HTML5 UP</title>
+		<title>New Item</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/new_item.css') }}" />
 	</head>
 	<body>
 
@@ -27,17 +28,34 @@
 
 				<!-- Main -->
 					<div id="main">
+						<h1>Add an Item</h1>
+						<form id="new-item-form" action="/new_item_request" method="POST">
+							<h2>Item Name</h2>
+							<input type="text" name="item-title" id="item-title" placeholder="Enter a name" autofocus required/>
 
-						<!-- Content -->
-							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-							</section>
+							<h2>Item Description</h2>
+							<textarea name="item-description" id="item-description" placeholder="Enter a description..." required></textarea>
 
+							<div id="category-wrapper">
+								<h2>Category</h2>
+								<select name="item-category" id="item-category" required>
+									<option value="disabled" selected disabled>Choose one...</option>
+									<option value="cat-appliances">Appliances</option>
+									<option value="cat-bikes">Bikes</option>
+									<option value="cat-boats">Boats</option>
+									<option value="cat-books">Books</option>
+									<option value="cat-camping">Camping</option>
+									<option value="cat-cellphones">Cell Phones</option>
+									<option value="cat-computers">Computers</option>
+									<option value="cat-gardening">Gardening</option>
+									<option value="cat-furniture">Furniture</option>
+									<option value="cat-photovideo">Photo/Video</option>
+									<option value="cat-instruments">Musical Instruments</option>
+									<option value="cat-sports">Sports</option>
+									<option value="cat-toysgames">Toys/Games</option>
+								</select>
+							</div>
+						</form>
 					</div>
 
 				<!-- Footer -->
