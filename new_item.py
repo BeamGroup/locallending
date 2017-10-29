@@ -1,7 +1,7 @@
 import mysql.connector
 
 def new_item(item_name,description,category,owner_id):
-	cnx = mysql.connector.connect(user='root', password='bensommer12',
+	cnx = mysql.connector.connect(user='root', password='bensommer',
                               host='127.0.0.1',
                               database='locallending')
 	cursor = cnx.cursor()
