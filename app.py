@@ -22,7 +22,7 @@ def signup_post():
     password = request.form['password']
     email = request.form['email']
     new_user(user, password, email)
-    return
+    return render_template('redirectToSearch.html')
 
 @app.route('/signup')
 def signup():
