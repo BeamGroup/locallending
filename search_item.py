@@ -7,15 +7,15 @@ def item_search(keyword,category):
                               database='locallending')
 	cursor = cnx.cursor()
 
-	query = ("SELECT item_name, description, owner_id, holder_id FROM `items` WHERE item_name LIKE '%{}%' or description LIKE '%{}%'".format(keyword,keyword))
+	query = ("SELECT item_name, description, owner_username, holder_username FROM `items` WHERE item_name LIKE '%{}%' or description LIKE '%{}%'".format(keyword,keyword))
 	print(query)
 	
 	cursor.execute(query)
 
 	#cnx.commit()
 	results = []
-	for (item_name, description, owner_id, holder_id) in cursor:
-		item = {'item_name': item_name, 'description': description, 'owner_id': owner_id, 'holder_id': holder_id}
+	for (item_name, description, owner_username, holder_username) in cursor:
+		item = {'item_name': item_name, 'description': description, 'owner_username': owner_username, 'holder_username': holder_username}
 		print(item)
 		results.append(item)
 	#print(json.stringify(cursor.stored_results()))

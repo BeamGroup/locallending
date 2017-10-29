@@ -21,6 +21,7 @@
 								<header class="major">
 									<h2>Search Results</h2>
 								</header>
+								
 								<table class="alt">
 									<thead>
 										<tr>
@@ -31,9 +32,10 @@
 										</tr>
 									</thead>
 									<tbody>
+
 									{% for result in results %}
 										<tr>
-											<td>{{ result['item_name'] }}</td>
+											<td>{{ result.item_name }}</td>
 											<td>{{ result.description }}</td>
 											<td>{{ result.owner_username }}</td>
 											<td>{{ result.holder_username }}</td>
@@ -41,7 +43,7 @@
 									{% endfor %}
 									</tbody>
 								</table>
-								
+								<p id="ele"></p>
 							</section>
 					</div>
 					<br />
@@ -56,5 +58,11 @@
 			<script src="{{ url_for('static',filename='js/util.js') }}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+			<script type="text/javascript">
+				function parse(){
+					document.getElementById('ele').innerHTML = window.location.href.split('?')[1];
+				};
+				//window.onload = parse();
+			</script>
 	</body>
 </html>

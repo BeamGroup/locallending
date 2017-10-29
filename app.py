@@ -44,16 +44,15 @@ def signup_post():
 def search():
     return render_template('search.html')
 
-@app.route('/search', methods=['POST'])
-def search_post():
-    #query = request.form['query']
-    #category = request.form['cat']
-    #result = item_search(query, category)
-    result = [{'item_name': 'Drill', 'description': 'a red drill', 'owner_id': '1', 'holder_id':'1'}]
-    return redirect(url_for('results_view', results = result))
+@app.route('/results', methods=['POST'])
+def results_post():
+    query = request.form['query']
+    category = request.form['cat']
+    result = item_search(query, category)
+    return render_template('results.html', results = result)
 
 @app.route('/results')
-def results_view(results = []):
+def results_view():
     print(results)
     return render_template('results.html', results = results)
 
