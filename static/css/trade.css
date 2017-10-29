@@ -1,0 +1,17 @@
+.main > h2, .main > p {
+    margin: 0;
+}
+
+.main > button {
+    margin: 0 5px 20px;
+}
+
+button#trade-button {
+    background-color: orange !important;
+    color: white !important;
+}
+
+button#confirm-button {
+    background-color: green !important;
+    color: white !important;
+}
