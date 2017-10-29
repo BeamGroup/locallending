@@ -24,7 +24,7 @@
 										{% if view == 'signup' %}
 										<h2>Signup</h2>
                   </header>
-                  <form class="form" action='/search'>
+                  <form class="form" action='/signup' method='POST'>
                     <div class="row uniform">
 											<div class="6u 12u$(xsmall)">
 												<input placeholder="First Name" type="text">
@@ -34,14 +34,16 @@
 											</div>
 										</div>
 										<br />
+                    <input type="email" placeholder='Email' name='email' required>
+                    <br />
 										{% else %}
 										<h2>Login</h2>
                   </header>
                   <form class="form" action='/search' method='POST'>
 										{% endif %}
-                    <input type="text" placeholder='Username' required>
+                    <input type="text" placeholder='Username' name='username' required>
                     <br />
-										<input type="password" placeholder="Password" required>
+										<input type="password" placeholder="Password" name='password' required>
 										{% if view == 'signup' %}
                     <br />
 										<input type="password" placeholder="Confirm Password" required>
@@ -65,5 +67,14 @@
 			<script src="{{ url_for('static',filename='js/util.js') }}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+			<script>
+				$(document).ready(function() {
+					$( "form" ).bind( "submit", function( event ) {
+						console.log('sadfsd')
+						window.location.replace("/search");
+					});
+			  });
+		</script>
+
 	</body>
 </html>
