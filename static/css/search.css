@@ -2,11 +2,15 @@
     padding: 20px 2%;
 }
 
-#search-bar-wrapper {
+#search-bar-wrapper, #cat-toggle-wrapper {
     justify-content: space-around;
     display: flex;
     height: 45px;
     width: 100%;
+}
+
+#cat-toggle-wrapper {
+    margin: 10px 0;
 }
 
 #searchbar {
@@ -21,8 +25,21 @@
 
 #cat-toggle {
     height: 100%;
+    background-color: grey;
+    padding: 5px 8px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    line-height: 2.0;
 }
 
 #search-cats {
     margin: 10px 0;
+}
+
+button#search-button {
+    background-color: steelblue !important;
+    color: white !important;
+    margin: 0 0 0 5px;
+    height: 100%;
 }

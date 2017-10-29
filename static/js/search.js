@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     var hidden = true;
     $('#cat-toggle').click(function() {
         if (hidden === true) {
@@ -13,4 +14,5 @@ $(document).ready(function() {
             console.log('ERROR: Cat toggle variable is neither "true" nor "false".');
         }
     });
+
 });
