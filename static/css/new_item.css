@@ -1,0 +1,32 @@
+#main {
+    padding: 20px;
+}
+
+#new-item-form> h2 {
+    margin: 20px 0 0 0;
+    display: block;
+}
+
+#category-wrapper {
+    margin-top: 20px;
+    display: flex;
+}
+
+#category-wrapper > h2 {
+    margin-right: 10%;
+}
+
+#item-category {
+    max-width: 50%;
+}
+
+button#add-item {
+    background-color: steelblue !important;
+    color: white !important;
+}
+
+#add-item-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
