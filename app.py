@@ -22,12 +22,10 @@ def login_post():
     user = request.form['username']
     password = request.form['password']
     logged_in = password_validate(user, password)
-    if (logged_in) {
+    if (logged_in):
         return redirect(url_for(search, user=user))
-    }
-    else {
+    else:
         return redirect(url_for(search))
-    }
 
 @app.route('/signup')
 def signup():
