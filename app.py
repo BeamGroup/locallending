@@ -25,7 +25,7 @@ def login_post():
     if (logged_in):
         return redirect(url_for(search, user=user))
     else:
-        return redirect(url_for(search))
+        return redirect(url_for(search, user='user'))
 
 @app.route('/signup')
 def signup():
@@ -54,8 +54,19 @@ def search():
 
 @app.route('/search', methods=['POST'])
 def search_post():
-    return render_template('search.html')
+    query = request.form['query']
+    category = request.form['cat']
+    results = item_search(query, category)
+    return redirect(url_for(results, results=results))
 
 @app.route('/results')
 def results():
     return render_template('results.html')
+
+@app.route('/elements')
+def elements():
+    return render_template('elements.html')
+
+@app.route('/new_item')
+def new_item():
+    return render_template('new_item.html')
