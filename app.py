@@ -66,8 +66,9 @@ def new_item_get():
 
 @app.route('/new_item', methods=['POST'])
 def submit_item_post():
-    item = request.form['item-name']
-    description = request.form['description']
+    item = request.form['item-title']
+    description = request.form['item-description']
+    category = request.form['item-category']
     owner_id = 'achen8'
-    new_item(item, description, owner_id)
+    new_item(item, description, category, owner_id)
     return redirect( url_for("search") )
