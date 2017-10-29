@@ -80,4 +80,5 @@ def submit_item_post():
 
 @app.route('/trade')
 def trade():
-    return render_template('trade.html')
+    user = request.args.get('user', default='achen8', type = str)
+    return render_template('trade.html', user=user)
