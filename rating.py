@@ -8,7 +8,7 @@ def rate(userID, rating_from_user):
 
 	cursor = cnx.cursor()
 
-	query = ("SELECT user_id, average_rating, total_rating_count FROM users WHERE user_id = %s")
+	query = ("SELECT user_id, average_rating, total_rating_count FROM users WHERE user_id = %s;")
 	cursor.execute(query,(userID))
 	cnx.commit()
 	total_rating_count = 0
