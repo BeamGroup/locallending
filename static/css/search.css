@@ -1,0 +1,28 @@
+#searchwrapper {
+    padding: 20px 2%;
+}
+
+#search-bar-wrapper {
+    justify-content: space-around;
+    display: flex;
+    height: 45px;
+    width: 100%;
+}
+
+#searchbar {
+    width: 80%;
+}
+
+#distance {
+    width: 30%;
+    min-width: 30px;
+    display: inline;
+}
+
+#cat-toggle {
+    height: 100%;
+}
+
+#adv-search-options {
+    margin: 10px 0;
+}
