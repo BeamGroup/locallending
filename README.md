@@ -1,2 +1,2 @@
 # locallending
-Invent:YU 2017
+Winning project of Invent:YU 2017
