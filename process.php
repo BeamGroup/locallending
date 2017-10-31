@@ -37,9 +37,16 @@ if($formType == "signup"){
 		//Stop script to not add to DB
 		die();
 	};
+	if(strlen($password) < 8){// || !preg_match("/[^a-zA-Z0-9\s\w", $password))
+		
+		header('Location: signup.php?error=password');
+		//Stop script to not add to DB
+		die();
+	};
+
 
 	//Hash Password
-	$hashedPassword = md5($password);
+	$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 	//Add to MySQL
 	$sql = ("INSERT INTO `users` (firstName, lastName, username, email, password) VALUES ('".$firstName."', '".$lastName."', '".$username."', '".$email."', '".$hashedPassword."')");
@@ -58,19 +65,29 @@ if($formType == "signup"){
 	$password = $_POST['password'];
 
 	//Since we put passwords into the MySQL as md5() hashed (@Sherman this is the first thing you'll change :)) we need to hash it to get the same result
-	$hashedPassword = md5($password);
 
-	$sql = ("SELECT * FROM `users` WHERE `username` LIKE '".$username."' AND `password` LIKE '".$hashedPassword."'");
-	$stm = $con->prepare($sql);
-	$stm->execute();
-	$row_count = $stm->rowCount();
+	$sql = ("SELECT username, password FROM `users` WHERE `username` LIKE '".$username."'");
+	$stm = $con->query($sql);
+	//$stm->execute();
+	$row_count = $stm->fetchColumn();
+
 
 	if($row_count > 0){
 		//Define Session
-		$_SESSION['username'] = $username;
-		
+		//$_SESSION['username'] = $username;
+		$row = $stm[0];
+		if(password_verify($password,$row['password'])){
+			header('Location: dashboard.php');
+		}
+		else{
+			$_SESSION['username'] = null;
+
+		//Send to login page
+			header('Location: login.php?authentication=error');
+			die();
+		}
 		//Direct to dashboard
-		header('Location: dashboard.php');
+		//
 	} else {
 		//Kill session
 		$_SESSION['username'] = null;
