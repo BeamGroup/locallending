@@ -29,7 +29,7 @@ if($_SESSION['username'] == null){
 						$stm = $con->prepare($sql);
 						$stm->execute();
 						$row = $stm->fetch();
-						echo '<h1>Trade '.$row['item_name'].' with <span style="color:#a89cc8;">'.$row['holder_username'].' </span></h1>'; ?>
+						echo '<h1>Trade <span style="color:#a89cc8;">'.$row['item_name'].'</span> with <span style="color:#a89cc8;">'.$row['holder_username'].' </span></h1>'; ?>
 						<p>Make sure you are with the other person.</p>
 					</header>
 				<!-- Main -->
