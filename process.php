@@ -22,6 +22,14 @@ if($formType == "signup"){
 	$password = $_POST['password'];
 	$confirmPassword = $_POST['confirmPassword'];
 
+	$sql = ("SELECT * FROM `users` WHERE `username` LIKE".$username);
+	$stm = $con->prepare($sql);
+	$stm->execute();
+	$row_count = $stm->rowCount();
+	if ($row_count > 0){
+		header('Location: signup.php?error=username');
+		die();
+	};
 	//Check Passwords Match
 	if($password != $confirmPassword){
 		//Redirect to signup.php and throw an error
