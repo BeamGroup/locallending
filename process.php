@@ -22,7 +22,7 @@ if($formType == "signup"){
 	$password = $_POST['password'];
 	$confirmPassword = $_POST['confirmPassword'];
 
-	$sql = ("SELECT * FROM `users` WHERE `username` LIKE".$username);
+	$sql = ("SELECT * FROM `users` WHERE `username` LIKE '".$username."'");
 	$stm = $con->prepare($sql);
 	$stm->execute();
 	$row_count = $stm->rowCount();
