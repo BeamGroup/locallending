@@ -43,8 +43,8 @@ if($formType == "signup"){
 
 	//Add to MySQL
 	$sql = ("INSERT INTO `users` (firstName, lastName, username, email, password) VALUES ('".$firstName."', '".$lastName."', '".$username."', '".$email."', '".$hashedPassword."')");
-	$stm = $con->prepare($sql);
-	$stm->execute();
+	$stm = $con->query($sql);
+	//$stm->execute();
 
 	//Since it all worked out okay let's create the session for him
 	$_SESSION['username'] = $username;
