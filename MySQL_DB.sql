@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+
 -- version 4.5.4.1deb2ubuntu2
 -- http://www.phpmyadmin.net
 --
