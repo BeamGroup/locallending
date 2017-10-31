@@ -23,7 +23,13 @@ if($_SESSION['username'] == null){
 			<div id="wrapper">
 				<!-- Header -->
 					<header id="header">
-						<h1>Trade item with <span style="color:#a89cc8;"><?php echo $_GET['user']; ?></span></h1>
+						<?php 
+						include 'connect.php';
+						$sql = ("SELECT item_name, holder_username FROM `items` WHERE item_id ='".$_GET['item_id']."'")
+						$stm = $con->prepare($sql);
+						$stm->execute();
+						$row = $stm->fetch()
+						echo '<h1>Trade '.$row['item_name'].' with <span style="color:#a89cc8;">'.$row['holder_username'].' </span></h1>' ?>
 						<p>Make sure you are with the other person.</p>
 					</header>
 				<!-- Main -->

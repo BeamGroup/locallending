@@ -62,7 +62,7 @@ if($_SESSION['username'] == null){
 
 								//Output the records
 								foreach($records as $row){
-									echo "<tr onclick=document.location='trade.php?user=".$_SESSION['username']."'>";
+									echo "<tr onclick=document.location='trade.php?user=".$row['owner_username']."?itemid=".$row['item_id']."'>";
 									echo "<td>".$row['item_name']."</td>";
 									echo "<td>".$row['description']."</td>";
 									echo "<td>".$row['owner_username']."</td>";
