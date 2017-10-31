@@ -77,6 +77,7 @@ if($formType == "signup"){
 		//$_SESSION['username'] = $username;
 		$row = $stm->fetch();
 		if(password_verify($password,$row['password'])){
+			$_SESSION['username'] = $username;
 			header('Location: dashboard.php');
 		}
 		else{
