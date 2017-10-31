@@ -75,7 +75,7 @@ if($formType == "signup"){
 	if($row_count > 0){
 		//Define Session
 		//$_SESSION['username'] = $username;
-		$row = $stm[0];
+		$row = $stm->fetch();
 		if(password_verify($password,$row['password'])){
 			header('Location: dashboard.php');
 		}
