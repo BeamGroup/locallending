@@ -1,7 +1,7 @@
 <?php
 //Check that user is signed in or send back to login page
 session_start();
-if($_SESSION['name'] == null){
+if($_SESSION['username'] == null){
 	header('Location: login.php');
 	die();
 };
