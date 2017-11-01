@@ -23,6 +23,7 @@ if($_SESSION['username'] == null){
 		<div id="wrapper">
 			<!-- Header -->
 			<header id="header">
+				Logged in as <?php echo $_SESSION['username']; ?>
 				<h1>Add an Item</h1>
 				<p>Offer an item to your community.</p>
 			</header>

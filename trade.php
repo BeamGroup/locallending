@@ -5,6 +5,15 @@ if($_SESSION['username'] == null){
 	header('Location: login.php');
 	die();
 };
+/*
+include 'connect.php';
+$sql = ("SELECT item_name, holder_username FROM `items` WHERE item_id ='".$_GET['item_id']."'");
+$stm = $con->prepare($sql);
+$stm->execute();
+$row = $stm->fetch();
+if($_SESSION['username'] == $row['holder_username'] && $_SESSION['username' == $row['owner_username']]){
+	header('search')
+}*/
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -23,6 +32,7 @@ if($_SESSION['username'] == null){
 			<div id="wrapper">
 				<!-- Header -->
 					<header id="header">
+						Logged in as <?php echo $_SESSION['username']; ?>
 						<?php 
 						include 'connect.php';
 						$sql = ("SELECT item_name, holder_username FROM `items` WHERE item_id ='".$_GET['item_id']."'");
