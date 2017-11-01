@@ -38,6 +38,7 @@ if($_SESSION['username'] == null){
                     		<a class='button big fit' href="new_item.php" style='margin:15px;'>Add listing</a>
                   		</li>
                 	</ul>
+                	<a class="button" href="logout.php">Log Out</a>
 				</section>
       		</div>
     	</div>
