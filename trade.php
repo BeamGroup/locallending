@@ -23,6 +23,7 @@ if($_SESSION['username'] == null){
 			<div id="wrapper">
 				<!-- Header -->
 					<header id="header">
+						<p>Logged in as <?php echo $_SESSION['username']; ?></p>
 						<?php 
 						include 'connect.php';
 						$sql = ("SELECT item_name, holder_username FROM `items` WHERE item_id ='".$_GET['item_id']."'");
