@@ -20,6 +20,7 @@ if($_SESSION['username'] == null){
 	<body>
 		<div id="wrapper">
 			<header id="header" class="alt">
+				Logged in as <?php echo $_SESSION['username']; ?>
 				<h1>Local Lending</h1>
 				<p>Meet up with friends to borrow or lend things!</p>
 			</header>
