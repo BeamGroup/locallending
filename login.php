@@ -1,3 +1,11 @@
+<?php
+//Check that user is signed in and send to dashboard page
+session_start();
+if($_SESSION['username'] != null){
+  header('Location: dashboard.php');
+  die();
+};
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
