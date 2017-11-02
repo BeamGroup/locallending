@@ -66,7 +66,7 @@ if($formType == "signup"){
 
 	//Since we put passwords into the MySQL as md5() hashed (@Sherman this is the first thing you'll change :)) we need to hash it to get the same result
 
-	$sql = ("SELECT username, password FROM `users` WHERE `username` LIKE '".$username."'");
+	$sql = ("SELECT username, password FROM `users` WHERE UPPER(`username`) = '".strtoupper($username)."'");
 	$stm = $con->prepare($sql);
 	$stm->execute();
 	$row_count = $stm->rowCount();
