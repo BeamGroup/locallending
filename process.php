@@ -77,7 +77,7 @@ if($formType == "signup"){
 		//$_SESSION['username'] = $username;
 		$row = $stm->fetch();
 		if(password_verify($password,$row['password'])){
-			$_SESSION['username'] = $username;
+			$_SESSION['username'] = strtolower($username);
 			if(isset($_SESSION['redirect'])){
 				$redir = $_SESSION['redirect'];
 				$_SESSION['redirect'] = null;
