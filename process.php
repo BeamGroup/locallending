@@ -78,6 +78,11 @@ if($formType == "signup"){
 		$row = $stm->fetch();
 		if(password_verify($password,$row['password'])){
 			$_SESSION['username'] = $username;
+			if(isset($_SESSION['redirect'])){
+				$redir = $_SESSION['redirect'];
+				$_SESSION['redirect'] = null;
+				header('Location: '.$redir);
+			}
 			header('Location: dashboard.php');
 		}
 		else{

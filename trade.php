@@ -2,6 +2,7 @@
 //Check that user is signed in or send back to login page
 session_start();
 if($_SESSION['username'] == null){
+	$_SESSION['redirect'] = $_SERVER["REQUEST_URI"]
 	header('Location: login.php');
 	die();
 };
@@ -35,7 +36,7 @@ if($_SESSION['username'] == $row['holder_username'] && $_SESSION['username' == $
 						Logged in as <?php echo $_SESSION['username']; ?>
 						<?php 
 						include 'connect.php';
-						$sql = ("SELECT item_name, holder_username FROM `items` WHERE item_id ='".$_GET['item_id']."'");
+						$sql = ("SELECT item_name, holder_username, owner_username FROM `items` WHERE item_id ='".$_GET['item_id']."'");
 						$stm = $con->prepare($sql);
 						$stm->execute();
 						$row = $stm->fetch();
@@ -46,6 +47,7 @@ if($_SESSION['username'] == $row['holder_username'] && $_SESSION['username' == $
 					<div id="main">
 						<!-- Content -->
 							<section id="content" class="main">
+								.
 								<h2>When you are both ready, click trade on your individual screens.</h2>
 								<p>This person-to-person trading ensures nobody gets scammed.</p>
 								<button id="trade-button">Trade</button>
