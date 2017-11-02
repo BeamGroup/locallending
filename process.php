@@ -83,7 +83,10 @@ if($formType == "signup"){
 				$_SESSION['redirect'] = null;
 				header('Location: '.$redir);
 			}
-			header('Location: dashboard.php');
+			else{
+				header('Location: dashboard.php');
+			}
+			
 		}
 		else{
 			$_SESSION['username'] = null;
