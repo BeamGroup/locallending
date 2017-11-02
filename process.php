@@ -15,14 +15,14 @@ $formType = $_POST['formType'];
 //Based on what formType we do diffrent things
 if($formType == "signup"){
 	//Set variables
-	$firstName = $_POST['firstName'];
-	$lastName = $_POST['lastName'];
-	$username = $_POST['username'];
-	$email = $_POST['email'];
+	$firstName = ucwords(strtolower($_POST['firstName']));
+	$lastName = ucwords(strtolower($_POST['lastName']));;
+	$username = strtolower($_POST['username']);
+	$email = strtolower($_POST['email']);
 	$password = $_POST['password'];
 	$confirmPassword = $_POST['confirmPassword'];
 
-	$sql = ("SELECT * FROM `users` WHERE `username` LIKE '".$username."'");
+	$sql = ("SELECT * FROM `users` WHERE `username` = '".$username."'");
 	$stm = $con->prepare($sql);
 	$stm->execute();
 	$row_count = $stm->rowCount();
@@ -37,12 +37,12 @@ if($formType == "signup"){
 		//Stop script to not add to DB
 		die();
 	};
-	if(strlen($password) < 8){// || !preg_match("/[^a-zA-Z0-9\s\w", $password))
+	/*if(strlen($password) < 8){// || !preg_match("/[^a-zA-Z0-9\s\w", $password))
 		
 		header('Location: signup.php?error=password');
 		//Stop script to not add to DB
 		die();
-	};
+	};*/
 
 
 	//Hash Password
@@ -77,7 +77,7 @@ if($formType == "signup"){
 		//$_SESSION['username'] = $username;
 		$row = $stm->fetch();
 		if(password_verify($password,$row['password'])){
-			$_SESSION['username'] = strtolower($username);
+			$_SESSION['username'] = $row['username'];
 			if(isset($_SESSION['redirect'])){
 				$redir = $_SESSION['redirect'];
 				$_SESSION['redirect'] = null;
