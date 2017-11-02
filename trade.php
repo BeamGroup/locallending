@@ -2,7 +2,7 @@
 //Check that user is signed in or send back to login page
 session_start();
 if($_SESSION['username'] == null){
-	$_SESSION['redirect'] = $_SERVER["REQUEST_URI"]
+	$_SESSION['redirect'] = $_SERVER["REQUEST_URI"];
 	header('Location: login.php');
 	die();
 };
