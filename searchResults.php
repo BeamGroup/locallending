@@ -49,8 +49,8 @@ if($_SESSION['username'] == null){
 								//Include connection to MySQL File
 								include 'connect.php';
 
-								$toSearch = $_GET['query'];
-								$cat = $_GET['cat'];
+								$toSearch = filter_var($_GET['query'],FILTER_SANITIZE_STRING);
+								$cat = filter_var($_GET['cat'],FILTER_SANITIZE_STRING);
 
 								//Make sure not null
 								if(!isset($toSearch) || !isset($cat)){
