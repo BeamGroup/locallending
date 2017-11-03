@@ -15,9 +15,9 @@ $formType = $_POST['formType'];
 //Based on what formType we do diffrent things
 if($formType == "signup"){
 	//Set variables
-	$firstName = ucwords(strtolower($_POST['firstName']));
-	$lastName = ucwords(strtolower($_POST['lastName']));;
-	$username = strtolower($_POST['username']);
+	$firstName = filter_var(ucwords(strtolower($_POST['firstName'])),FILTER_SANITIZE_STRING);
+	$lastName = filter_var(ucwords(strtolower($_POST['lastName'])),FILTER_SANITIZE_STRING);
+	$username = filter_var(strtolower($_POST['username']),FILTER_SANITIZE_STRING);//strtolower($_POST['username']);
 	$email = strtolower($_POST['email']);
 	$password = $_POST['password'];
 	$confirmPassword = $_POST['confirmPassword'];
@@ -107,9 +107,9 @@ if($formType == "signup"){
 	};
 } else if($formType == "new_item"){
 	//Check all inputs given, he is logged in, and push to MySQL
-	$itemTitle = $_POST['item-title'];
-	$itemDescription = $_POST['item-description'];
-	$itemCat = $_POST['item-category'];
+	$itemTitle = filter_var($_POST['item-title'],FILTER_SANITIZE_STRING);
+	$itemDescription = filter_var($_POST['item-description'],FILTER_SANITIZE_STRING);
+	$itemCat = filter_var($_POST['item-category'],FILTER_SANITIZE_STRING);
 
 	//Check inputs not empty
 	if($itemTitle == null || $itemDescription == null || $itemCat == null){
