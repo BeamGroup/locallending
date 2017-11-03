@@ -5,3 +5,7 @@
 .atom
 
 *.pyc
+
+.idea
+
+*.swp

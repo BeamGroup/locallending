@@ -1,0 +1,26 @@
+{
+  "name": "locallending",
+  "version": "1.0.0",
+  "description": "Check it out now [here](http://ww1.bensommer.net)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelkolber/locallending.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelkolber/locallending/issues"
+  },
+  "homepage": "https://github.com/michaelkolber/locallending#readme",
+  "devDependencies": {
+    "@cedx/gulp-php-minify": "^7.0.1",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-connect-php": "^1.0.1",
+    "gulp-watch": "^4.3.11"
+  }
+}
