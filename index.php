@@ -17,6 +17,8 @@
 						<p>Meet up with friends to borrow or lend things!</p>
 						<a href="login.php"><button>Log in</button></a>
 						<a href="signup.php"><button>Sign up</button></a>
+                        <br />
+                        <a href="search.php"><button style="margin-top:5px;">Try It Out</button></a>
 					</header>
 					<nav id="nav">
 						<ul>
