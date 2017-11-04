@@ -42,6 +42,7 @@ if($_SESSION['username'] != null){
                     <input type="password" placeholder="Password" name="password" required><br />
                     <input type="hidden" name="formType" value="login" />
                     <button id='submit-button' type='submit'>Submit</button>
+                    <a href="signup.php"><span style="color:deepskyblue;padding-left:15px;">Or sign up</span></a>
                   </form>
                 </div>
               </div>
