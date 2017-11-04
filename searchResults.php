@@ -74,16 +74,16 @@ if($_SESSION['username'] == null){
 						</tbody>
 					</table>
 					<p id="ele"></p>
+                    <div style="margin-right: auto; margin-left: auto;text-align:center;">
+                        <a class="button special" href="dashboard.php">Dashboard</a> |
+                        <a class="button special" href="search.php">Search</a> |
+                        <a class="button special" href="new_item.php">Add Listing</a>
+                    </div>
 				</section>
 					</div>
 					<br />
 				<!-- Footer -->
-			</div> <br />
-				<div style="margin-right: auto; margin-left: auto;text-align:center;">
-					<a class="button special" href="dashboard.php">Dashboard</a> | 
-					<a class="button special" href="search.php">Search</a> | 
-					<a class="button special" href="new_item.php">Add Listing</a>
-				</div>
+			</div>
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>

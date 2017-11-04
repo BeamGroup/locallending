@@ -63,7 +63,6 @@ if($_SESSION['username'] == null){
 							</div>
 						</form>
 					</div>
-					<hr />
 					<div style="margin-right: auto; margin-left: auto;text-align:center;">
 				  		<a class="button special" href="dashboard.php">Dashboard</a> | 
 				  		<a class="button special" href="search.php">Search</a> | 
