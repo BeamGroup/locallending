@@ -56,8 +56,15 @@ if($formType == "signup"){
 	//Since it all worked out okay let's create the session for him
 	$_SESSION['username'] = $username;
 
-	//Redirect to dashboard
-	header('Location: dashboard.php');
+	//Redirect to dashboard or to search
+	if(isset($_SESSION['redirect'])){
+		$redir = $_SESSION['redirect'];
+		$_SESSION['redirect'] = null;
+		header('Location: '.$redir);
+	}
+	else{
+		header('Location: dashboard.php');
+	}
 
 } else if($formType == "login") {
 	//Pull the login info from the MySQL, if it matches create a Session with the name
