@@ -57,10 +57,8 @@ if($formType == "signup"){
 	$_SESSION['username'] = $username;
 
 	//Redirect to dashboard or to search
-	if(isset($_SESSION['redirect'])){
-		$redir = $_SESSION['redirect'];
-		$_SESSION['redirect'] = null;
-		header('Location: '.$redir);
+	if(isset($_POST['redirect_item_id'])){
+		header('Location: trade.php?item_id=' . $_POST['redirect_item_id']);
 	}
 	else{
 		header('Location: dashboard.php');
@@ -85,10 +83,8 @@ if($formType == "signup"){
 		$row = $stm->fetch();
 		if(password_verify($password,$row['password'])){
 			$_SESSION['username'] = $row['username'];
-			if(isset($_SESSION['redirect'])){
-				$redir = $_SESSION['redirect'];
-				$_SESSION['redirect'] = null;
-				header('Location: '.$redir);
+			if(isset($_POST['redirect_item_id'])){
+				header('Location: trade.php?item_id=' . $_POST['redirect_item_id']);
 			}
 			else{
 				header('Location: dashboard.php');

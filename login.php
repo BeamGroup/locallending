@@ -41,8 +41,19 @@ if($_SESSION['username'] != null){
                     <input type="text" placeholder="Username" name="username" required><br />
                     <input type="password" placeholder="Password" name="password" required><br />
                     <input type="hidden" name="formType" value="login" />
+                    <?php
+                      if(isset($_GET['item_id'])){
+                        echo "<input type='hidden' name='redirect_item_id' value='" . $_GET['item_id'] . "'>";
+                      };
+                    ?>
                     <button id='submit-button' type='submit'>Submit</button>
-                    <a href="signup.php"><span style="color:deepskyblue;padding-left:15px;">Or sign up</span></a>
+                      <?php
+                      echo "<a href='signup.php";
+                        if(isset($_GET['item_id'])){
+                          echo "?item_id=" . $_GET['item_id'];
+                        };
+                        echo "'><span style='color:deepskyblue;padding-left:15px;'>Or sign up</span></a>";
+                      ?>
                   </form>
                 </div>
               </div>
