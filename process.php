@@ -18,7 +18,7 @@ if($formType == "signup"){
 	$firstName = filter_var(ucwords(strtolower($_POST['firstName'])),FILTER_SANITIZE_STRING);
 	$lastName = filter_var(ucwords(strtolower($_POST['lastName'])),FILTER_SANITIZE_STRING);
 	$username = filter_var(strtolower($_POST['username']),FILTER_SANITIZE_STRING);//strtolower($_POST['username']);
-	$email = strtolower($_POST['email']);
+	$email = filter_var(strtolower($_POST['email']),FILTER_SANITIZE_EMAIL);
 	$password = $_POST['password'];
 	$confirmPassword = $_POST['confirmPassword'];
 
