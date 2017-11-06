@@ -35,7 +35,7 @@ if($_SESSION['username'] == $row['holder_username'] && $_SESSION['username' == $
 						Logged in as <?php echo $_SESSION['username']; ?>
 						<?php 
 						include 'connect.php';
-						$item_id = filter_var($_GET['item_id'],FILTER_SANITIZE_NUMBER_INT); 
+						$item_id = $_GET['item_id'];//filter_var($_GET['item_id'],FILTER_SANITIZE_NUMBER_INT); 
 						$sql = ("SELECT item_name, holder_username, owner_username FROM `items` WHERE item_id ='".$item_id."'");
 						$stm = $con->prepare($sql);
 						$stm->execute();
