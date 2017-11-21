@@ -17,7 +17,6 @@ if($_SESSION['username'] == $row['holder_username'] && $_SESSION['username' == $
 
 include 'header.php';
 ?>
-	<body>
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Header -->

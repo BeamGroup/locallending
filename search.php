@@ -10,7 +10,6 @@ if($_SESSION['username'] == null){
 
 include 'header.php';
 ?>
-	<body>
 		<div id="wrapper">
 			<header id="header" class="alt" style="padding-bottom: 10px;">
 				<h1>Hello <?php echo $_SESSION['username']; ?></h1>

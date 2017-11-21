@@ -1,0 +1,60 @@
+.navbar--spacer {
+    width: 100%;
+    height: 50px;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 50px;
+
+    padding: 0 25px;
+
+    background-color: white;
+    box-shadow: 0px 2px 15px 2px #3c3c3c69;
+
+    color: black;
+    font-size: 22px;
+}
+
+.navbar__navbutton:hover {
+    color: steelblue;
+}
+
+.navbar__navbutton:active{
+    color: #315b7d;
+}
+
+.navbar__navbutton--logout:hover {
+    color: red;
+}
+
+.navbar__navbutton--logout:active {
+    color: darkred;
+}
+
+.navbar__name {
+    margin: auto 0;
+    font-weight: bold;
+    color: #315b7d;
+}
+
+.navbar__name:hover {
+    color: steelblue;
+}
+
+.navbar__name:active {
+    color: #315b7d;
+}
+
+.navbar__navigation {
+    display: flex;
+}
+
+.navbar__navbutton {
+    margin: auto;
+    padding: 0 10px;
+}

@@ -1,8 +1,6 @@
 <?php
 include 'header.php';
 ?>
-	<body>
-
 			<div id="wrapper">
 					<header id="header" class="alt">
 						<h1>Local Lending</h1>

@@ -36,6 +36,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <link rel="stylesheet" href="assets/css/locallending.css" />
         <link rel="stylesheet" href="
         <?php
         switch ( basename($_SERVER['PHP_SELF']) ) {
@@ -52,3 +53,14 @@
         ?>
         " />
 	</head>
+    <body>
+        <div class="navbar">
+            <a class="navbar__name" href="/">Local Lending</a>
+            <div class="navbar__navigation">
+                <a class="navbar__navbutton" href="/dashboard.php">Dashboard</a>
+                <a class="navbar__navbutton" href="/search.php">Search</a>
+                <a class="navbar__navbutton" href="/new_item.php">New Item</a>
+                <a class="navbar__navbutton navbar__navbutton--logout" href="/logout.php">Logout</a>
+            </div>
+        </div>
+        <div class="navbar--spacer"></div>

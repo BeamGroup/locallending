@@ -8,7 +8,6 @@ if($_SESSION['username'] == null){
 
 include 'header.php';
 ?>
-	<body>
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- Header -->

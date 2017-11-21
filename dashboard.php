@@ -8,7 +8,6 @@ if($_SESSION['username'] == null){
 
 include 'header.php';
 ?>
-	<body>
 		<div id="wrapper">
 			<header id="header" class="alt">
 				Logged in as <?php echo $_SESSION['username']; ?>
