@@ -5,7 +5,6 @@
 #search-bar-wrapper, #cat-toggle-wrapper {
     justify-content: space-around;
     display: flex;
-    height: 45px;
     width: 100%;
 }
 
@@ -41,5 +40,5 @@ button#search-button {
     background-color: steelblue !important;
     color: white !important;
     margin: 0 0 0 5px;
-    height: 100%;
+    font-size: 100%;
 }
