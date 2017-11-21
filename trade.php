@@ -14,28 +14,18 @@ $row = $stm->fetch();
 if($_SESSION['username'] == $row['holder_username'] && $_SESSION['username' == $row['owner_username']]){
 	header('search')
 }*/
+
+include 'header.php';
 ?>
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Trade Item</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link rel="stylesheet" href="assets/css/trade.css" />
-	</head>
 	<body>
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Header -->
 					<header id="header">
 						Logged in as <?php echo $_SESSION['username']; ?>
-						<?php 
+						<?php
 						include 'connect.php';
-						$item_id = filter_var($_GET['item_id'],FILTER_SANITIZE_NUMBER_INT); 
+						$item_id = filter_var($_GET['item_id'],FILTER_SANITIZE_NUMBER_INT);
 						$sql = ("SELECT item_name, holder_username, owner_username FROM `items` WHERE item_id ='".$item_id."'");
 						$stm = $con->prepare($sql);
 						$stm->execute();
@@ -57,8 +47,8 @@ if($_SESSION['username'] == $row['holder_username'] && $_SESSION['username' == $
 							</section>
 						<hr />
 						<div style="margin-right: auto; margin-left: auto;text-align:center;">
-					  		<a class="button special" href="dashboard.php">Dashboard</a> | 
-					  		<a class="button special" href="search.php">Search</a> | 
+					  		<a class="button special" href="dashboard.php">Dashboard</a> |
+					  		<a class="button special" href="search.php">Search</a> |
 					  		<a class="button special" href="new_item.php">Add Listing</a>
 						</div>
 						<br />

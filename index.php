@@ -1,14 +1,6 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Local Lending</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
+<?php
+include 'header.php';
+?>
 	<body>
 
 			<div id="wrapper">
@@ -38,9 +30,9 @@
 										<header class="major">
 											<h2>Local Lending</h2>
 										</header>
-										<p>Local lending is a platform where people can lend their belongings 
+										<p>Local lending is a platform where people can lend their belongings
 											to those who need it. Your items are secured via a credit card deposit,
-											 so our users can have a peace of mind knowing that their lent items are going 
+											 so our users can have a peace of mind knowing that their lent items are going
 											 to be used responsibly.</p>
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>

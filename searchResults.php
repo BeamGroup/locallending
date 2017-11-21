@@ -7,18 +7,9 @@ if($_SESSION['username'] == null){
 	die();
 };
 */
+
+include 'header.php';
 ?>
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Local Lending</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
 	<body>
 		<div id="wrapper">
 			<header id="header" class="alt" style="padding-bottom: 10px;">
@@ -32,7 +23,7 @@ if($_SESSION['username'] == null){
 					<header class="major">
 						<h2>Search Results</h2>
 					</header>
-					
+
 					<table class="alt">
 						<thead>
 							<tr>
