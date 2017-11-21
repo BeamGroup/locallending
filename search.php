@@ -29,7 +29,7 @@ if($_SESSION['username'] == null){
 					if(isset($_GET['message']) == "thankyou"){
 						echo "<a disabled='disabled' style='margin-left: auto;margin-right: auto;' class='button special fit'>Thanks for sharing!</a>";
 					};
-				?>				
+				?>
 			</header>
 				<!-- Main -->
 				<div id="main">
@@ -40,7 +40,7 @@ if($_SESSION['username'] == null){
 								<input type="text" name="query" placeholder="Search for anything" id="searchbar" autofocus required>
 								<button id="search-button">Search</button>
 							</div>
-							<div id="cat-toggle-wrapper" onclick="document.getElementById('search-cats').style.display='block'";>
+							<div id="cat-toggle-wrapper">
 								<span id="cat-toggle">Categories</span>
 							</div>
 							<div id="search-cats" style="display:none">
@@ -64,8 +64,8 @@ if($_SESSION['username'] == null){
 						</form>
 					</div>
 					<div style="margin-right: auto; margin-left: auto;text-align:center;">
-				  		<a class="button special" href="dashboard.php">Dashboard</a> | 
-				  		<a class="button special" href="search.php">Search</a> | 
+				  		<a class="button special" href="dashboard.php">Dashboard</a> |
+				  		<a class="button special" href="search.php">Search</a> |
 				  		<a class="button special" href="new_item.php">Add Listing</a>
 					</div>
 					<br />
@@ -80,5 +80,6 @@ if($_SESSION['username'] == null){
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/search.js"></script>
 	</body>
 </html>
