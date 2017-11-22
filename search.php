@@ -8,7 +8,10 @@ if($_SESSION['username'] == null){
 };
 */
 session_start();
-include 'header.php';
+if(isset($_SESSION['username'])){
+	include 'header.php';
+}
+
 ?>
 		<div id="wrapper">
 			<header id="header" class="alt" style="padding-bottom: 10px;">

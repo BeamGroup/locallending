@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -59,20 +55,12 @@ session_start();
 	</head>
     <body>
         <div class="navbar">
-            <a class="navbar__name" href="/">Local Lending</a>
+            <a class="navbar__name" href="">Local Lending</a>
             <div class="navbar__navigation">
                 <a class="navbar__navbutton" href="dashboard.php">Dashboard</a>
                 <a class="navbar__navbutton" href="search.php">Search</a>
                 <a class="navbar__navbutton" href="new_item.php">New Item</a>
-                <?php
-                if (isset($_SESSION['username'])){
-                    echo "<a class=\"navbar__navbutton navbar__navbutton--logout\" href=\"logout.php\">Logout</a>";
-                }
-                else{
-                    echo "<a class=\"navbar__navbutton navbar__navbutton--logout\" href=\"login.php\">Login</a>";
-                }
-                ?>
-                
+                <a class="navbar__navbutton navbar__navbutton--logout" href="logout.php">Logout</a>
             </div>
         </div>
         <div class="navbar--spacer"></div>

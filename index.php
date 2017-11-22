@@ -1,6 +1,9 @@
 <?php
 session_start();
-include 'header.php';
+if(isset($_SESSION['username'])){
+	include 'header.php';
+}
+
 ?>
 			<div id="wrapper">
 					<header id="header" class="alt">
