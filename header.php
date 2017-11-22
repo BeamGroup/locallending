@@ -58,7 +58,7 @@ session_start();
 	</head>
     <body>
         <?php
-        if isset($_SESSION['username']){
+        if (isset($_SESSION['username'])){
             echo "<div class=\"navbar\">
             <a class=\"navbar__name\" href=\"/\">Local Lending</a>
             <div class=\"navbar__navigation\">
