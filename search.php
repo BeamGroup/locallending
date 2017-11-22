@@ -7,7 +7,7 @@ if($_SESSION['username'] == null){
 	die();
 };
 */
-
+session_start();
 include 'header.php';
 ?>
 		<div id="wrapper">
