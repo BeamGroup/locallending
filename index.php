@@ -6,16 +6,29 @@ include 'header.php';
 					<header id="header" class="alt">
 						<h1>Local Lending</h1>
 						<p>Meet up with friends to borrow or lend things!</p>
-						<a href="login.php"><button>Log in</button></a>
-						<a href="signup.php"><button>Sign up</button></a>
-                        <br />
-                        <a href="search.php"><button style="margin-top:5px;">Try It Out</button></a>
+						<?php
+						if(!isset($_SESSION['username'])){
+							echo "<a href=\"login.php\"><button>Log in</button></a>
+							<a href=\"signup.php\"><button>Sign up</button></a>
+	                        <br />
+	                        <a href=\"search.php\"><button style=\"margin-top:5px;\">Try It Out</button></a>";
+						}
+						else{
+							echo "<a href=\"dashboard.php\"><button>Go to dashboard</button></a>";
+						}
+						
+                        ?>
 					</header>
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
 							<li><a href="#first">Features</a></li>
-							<li><a href="#cta">Get Started</a></li>
+							<?php
+								if(!isset($_SESSION['username'])){
+									echo "<li><a href=\"#cta\">Get Started</a></li>";
+								}
+								
+							?>
 						</ul>
 					</nav>
 
@@ -63,19 +76,28 @@ include 'header.php';
 									</li>
 								</ul>
 							</section>
-
+						<?php
+						if(!isset($_SESSION['username'])){
+						echo "
 						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
+							<section id=\"cta\" class=\"main special\">
+								<header class=\"major\">
 									<h2>Sign up to use Local Lending!</h2>
 									<p>Sign up today so that you don't have to buy everything that you may only being using once!</p>
 								</header>
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="signup.php" class="button special">Sign up!</a></li>
+								<footer class=\"major\">
+									<ul class=\"actions\">
+										
+										
+											<li><a href=\"signup.php\" class=\"button special\">Sign up!</a></li>;
+										
+										
+										
 									</ul>
 								</footer>
-							</section>
+							</section>";
+							}
+							?>
 					</div>
 					<br />
 			</div>
