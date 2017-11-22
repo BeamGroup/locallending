@@ -68,6 +68,9 @@ session_start();
                 if (isset($_SESSION['username'])){
                     echo "<a class=\"navbar__navbutton navbar__navbutton--logout\" href=\"logout.php\">Logout</a>";
                 }
+                else{
+                    echo "<a class=\"navbar__navbutton navbar__navbutton--logout\" href=\"login.php\">Login</a>";
+                }
                 ?>
                 
             </div>
