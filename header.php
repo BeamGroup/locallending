@@ -68,7 +68,7 @@ session_start();
                 <a class=\"navbar__navbutton navbar__navbutton--logout\" href=\"logout.php\">Logout</a>
             </div>
         </div>
-        <div class=\"navbar--spacer\"></div>"
+        <div class=\"navbar--spacer\"></div>";
         }
         
         ?>
