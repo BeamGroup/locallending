@@ -55,7 +55,7 @@
 	</head>
     <body>
         <div class="navbar">
-            <a class="navbar__name" href="">Local Lending</a>
+            <a class="navbar__name" href="/">Local Lending</a>
             <div class="navbar__navigation">
                 <a class="navbar__navbutton" href="dashboard.php">Dashboard</a>
                 <a class="navbar__navbutton" href="search.php">Search</a>
