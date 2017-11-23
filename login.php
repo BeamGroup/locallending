@@ -41,7 +41,7 @@ include 'header.php';
                         if(isset($_GET['item_id'])){
                           echo "?item_id=" . $_GET['item_id'];
                         };
-                        echo "'><span style='color:deepskyblue;padding-left:15px;'>Or sign up</span></a>";
+                        echo "'><span style='color:deepskyblue;padding-left:15px;'>or Sign Up</span></a>";
                       ?>
                   </form>
                 </div>
