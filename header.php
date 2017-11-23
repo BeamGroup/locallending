@@ -57,19 +57,38 @@ session_start();
         " />
 	</head>
     <body>
-        <?php
-        if (isset($_SESSION['username'])){
-		?>
-            <div class="navbar">
-            	<a class="navbar__name" href="/">Local Lending</a>
-            	<div class="navbar__navigation">
-                	<a class="navbar__navbutton" href="dashboard.php">Dashboard</a>
-                	<a class="navbar__navbutton" href="search.php">Search</a>
-                	<a class="navbar__navbutton" href="new_item.php">New Item</a>
-                	<a class="navbar__navbutton navbar__navbutton--logout" href="logout.php">Logout</a>
-            	</div>
+    <?php
+    if (isset($_SESSION['username'])){
+	?>
+        <div class="navbar">
+        	<a class="navbar__name" href="/">
+				<div class="navbar__navbutton-text">Local Lending</div>
+			</a>
+        	<div class="navbar__navigation">
+            	<a class="navbar__navbutton" href="dashboard.php">
+					<div class="navbar__navbutton-text">Dashboard</div>
+				</a>
+
+				<div class="navbar__separator"></div>
+
+				<a class="navbar__navbutton" href="search.php">
+					<div class="navbar__navbutton-text">Search</div>
+				</a>
+
+				<div class="navbar__separator"></div>
+
+				<a class="navbar__navbutton" href="new_item.php">
+					<div class="navbar__navbutton-text">New Item</div>
+				</a>
+
+				<div class="navbar__separator"></div>
+
+				<a class="navbar__navbutton navbar__navbutton--logout" href="logout.php">
+					<div class="navbar__navbutton-text">Logout</div>
+				</a>
         	</div>
-        <?php
-		}
-        ?>
+    	</div>
+    <?php
+	}
+    ?>
 		<div class="navbar--spacer"></div>

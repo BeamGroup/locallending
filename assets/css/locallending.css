@@ -11,13 +11,17 @@
     width: 100%;
     height: 50px;
 
-    padding: 0 15px;
+    padding-right: 15px;
 
     background-color: white;
     box-shadow: 0px 2px 15px 2px #3c3c3c69;
 
     color: black;
    /* font-size: 22px;*/
+}
+
+.navbar__navbutton {
+    padding: 0 10px;
 }
 
 .navbar__navbutton:hover {
@@ -36,8 +40,14 @@
     color: darkred;
 }
 
+.navbar__navbutton-text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .navbar__name {
-    margin: auto 0;
+    padding: 0 15px;
     font-weight: bold;
     color: #315b7d;
 }
@@ -54,7 +64,8 @@
     display: flex;
 }
 
-.navbar__navbutton {
-    margin: auto;
-    padding: 0 10px;
+.navbar__separator {
+    margin: auto 0;
+    height: 45%;
+    border-left: 1px solid lightgrey;
 }
