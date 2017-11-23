@@ -69,3 +69,32 @@
     height: 45%;
     border-left: 1px solid lightgrey;
 }
+
+/******** POTENTIAL USERNAME DROPDOWN *********
+.navbar__navbutton--username {
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar__navbutton--username-text::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 8px solid black;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-left: 6px;
+    margin-top: 4px;
+}
+
+.navbar__navbutton--username-text:hover::after {
+    border-top: 6px solid steelblue;
+}
+
+
+.navbar__navbutton--logout {
+    position: fixed;
+}
+
+********* END POTENTIAL USERNAME DROPDOWN *********/
