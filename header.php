@@ -57,9 +57,6 @@ session_start();
         " />
 	</head>
     <body>
-    <?php
-    if (isset($_SESSION['username'])){
-	?>
         <div class="navbar">
         	<a class="navbar__name" href="/">
 				<div class="navbar__navbutton-text">Local Lending</div>
@@ -83,12 +80,21 @@ session_start();
 
 				<div class="navbar__separator"></div>
 
+				<?php
+				if (isset($_SESSION['username'])) {
+				?>
 				<a class="navbar__navbutton navbar__navbutton--logout" href="logout.php">
 					<div class="navbar__navbutton-text">Logout</div>
 				</a>
+				<?php
+				} else {
+				?>
+				<a class="navbar__navbutton" href="login.php">
+					<div class="navbar__navbutton-text">Log In</div>
+				</a>
+				<?php
+				}
+				?>
         	</div>
     	</div>
-    <?php
-	}
-    ?>
 		<div class="navbar--spacer"></div>
