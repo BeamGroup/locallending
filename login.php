@@ -35,7 +35,7 @@ include 'header.php';
                         echo "<input type='hidden' name='redirect_item_id' value='" . $_GET['item_id'] . "'>";
                       };
                     ?>
-                    <button id='submit-button' type='submit'>Submit</button>
+                    <button id='submit-button' type='submit'>Log In</button>
                       <?php
                       echo "<a href='signup.php";
                         if(isset($_GET['item_id'])){
