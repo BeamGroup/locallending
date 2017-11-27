@@ -89,7 +89,7 @@ include 'header.php';
 									<ul class=\"actions\">
 										
 										
-											<li><a href=\"signup.php\" class=\"button special\">Sign up!</a></li>;
+											<li><a href=\"signup.php\" class=\"button special\">Sign up!</a></li>
 										
 										
 										
