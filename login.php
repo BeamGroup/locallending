@@ -1,7 +1,7 @@
 <?php
 //Check that user is signed in and send to dashboard page
 session_start();
-if($_SESSION['username'] != null){
+if(isset($_SESSION['username'])){
   header('Location: dashboard.php');
   die();
 };
@@ -32,6 +32,7 @@ include 'header.php';
                     <input type="hidden" name="formType" value="login" />
                     <?php
                       if(isset($_GET['item_id'])){
+                      	$_GET['item_id'] = filter_var($_GET['item_id'],FILTER_SANITIZE_STRING); //FILTER!!!
                         echo "<input type='hidden' name='redirect_item_id' value='" . $_GET['item_id'] . "'>";
                       };
                     ?>
@@ -39,7 +40,8 @@ include 'header.php';
                       <?php
                       echo "<a href='signup.php";
                         if(isset($_GET['item_id'])){
-                          echo "?item_id=" . $_GET['item_id'];
+                        	$_GET['item_id'] = filter_var($_GET['item_id'],FILTER_SANITIZE_STRING); //FILTER!!!
+                          	echo "?item_id=" . $_GET['item_id'];
                         };
                         echo "'><span style='color:deepskyblue;padding-left:15px;'>or Sign Up</span></a>";
                       ?>
